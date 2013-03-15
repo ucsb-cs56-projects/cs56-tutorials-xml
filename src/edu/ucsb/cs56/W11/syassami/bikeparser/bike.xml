@@ -1,0 +1,21 @@
+<?xml version = "1.0" ?>
+	<cyclingteam>
+	  <bike>
+	    <owner>Shayan</owner>
+	    <type>Colnago</type>
+	    <components>Shimano</components>
+    <components>FSA</components>
+	  </bike>
+	  <bike>
+	    <owner>Kelsey</owner>
+	    <type>Cannondale</type>
+	    <components>Shimano</components>
+    <components>Deda</components>
+	  </bike>
+	  <bike>
+	    <owner>Danny</owner>
+	    <type>Fuji</type>
+	    <components>Sram</components>
+    <components>FSA</components>
+	  </bike>
+	</cyclingteam>
