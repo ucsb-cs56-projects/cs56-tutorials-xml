@@ -45,7 +45,7 @@
 
 	<target name="compile" description="compiles the source code">
 		<mkdir dir="build" />
-	     	<javac srcdir="src" destdir="build" debug="true" debuglevel="lines,source">
+	     	<javac srcdir="src" destdir="build" debug="true" debuglevel="lines,source" includeantruntime="false">
 	      		<classpath>
 	      			<pathelement location="build"/>
 	      			<pathelement location="lib/junit-4.8.2.jar"/>
