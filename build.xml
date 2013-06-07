@@ -22,7 +22,7 @@
 		<javadoc destdir="javadoc" author="true" version="true" use="true" >
 			<fileset dir="src" includes="**/*.java"/>
 			<classpath>
-				<pathelement location="/cs/faculty/pconrad/public_html/cs56/lib/junit-4.8.2.jar"/>
+				<pathelement location="lib/junit-4.8.2.jar"/>
 			</classpath>
 			<link href="http://java.sun.com/javase/6/docs/api/" />       
 		</javadoc>
@@ -45,10 +45,10 @@
 
 	<target name="compile" description="compiles the source code">
 		<mkdir dir="build" />
-	     	<javac srcdir="src" destdir="build" debug="true" debuglevel="lines, source">
+	     	<javac srcdir="src" destdir="build" debug="true" debuglevel="lines,source" includeantruntime="false">
 	      		<classpath>
 	      			<pathelement location="build"/>
-	      			<pathelement location="/cs/faculty/pconrad/public_html/cs56/lib/junit-4.8.2.jar/"/>
+	      			<pathelement location="lib/junit-4.8.2.jar"/>
 	      		</classpath>
 	      	</javac>
 	</target>
