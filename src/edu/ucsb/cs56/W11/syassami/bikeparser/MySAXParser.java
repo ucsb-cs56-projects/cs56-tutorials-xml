@@ -7,6 +7,10 @@ import org.xml.sax.helpers.*;
 /**
  * This class is our actual parser, which is an extension of the default handler already provided by xml libraries within java.
  * We are going to be using Apache's Xerces parser to complete our tasks and make XML parsing life easier, below are comments that will make comprehending the file much easier.
+ *
+ * Previous author: syassami
+ * @author Fanny Kuang
+ * @version UCSB CS56 Spring 2013
  */
 
 
@@ -33,6 +37,7 @@ public class MySAXParser extends DefaultHandler {
 
 /**
  * This uses the XERCES parser on apache's website
+ * @param file XML File which will be parsed
  */
   
   public void processFile(String file) throws Exception {
@@ -44,9 +49,10 @@ public class MySAXParser extends DefaultHandler {
     parser.parse(file);
   }
 /**
- *uri and local name are used with namespaces, something that our xml file doesnt really contain, so we are just skipping to the basics
-qname is the name of the element found, ie, bike or owner etc.
-* attributes are within the tags, and here we have none in our xml file, so lets continue.
+ * Prints the starting XML Element
+ * @param uri,localName are used with namespaces, something that our xml file doesnt really contain, so we are just skipping to the basics
+ * @param qname is the name of the element found, ie, bike or owner etc.
+ * @param attributes are within the tags, and here we have none in our xml file, so lets continue.
 */
   public void startElement(String uri, String localName, String qname, 
                            Attributes attributes) {
@@ -58,6 +64,8 @@ qname is the name of the element found, ie, bike or owner etc.
   } 
   /**
  * for each start element, there is an endElement, that closes the tag off.
+   * @param uri,localName are used with namespaces, something that our xml file doesnt really contain, so we are just skipping to the basics
+   * @param qname is the name of the element found, ie, bike or owner etc.
  */
   public void endElement(String uri, String localName, String qname) { 
     System.out.println("endElement:" + qname+":" + b.toString());
@@ -76,6 +84,9 @@ qname is the name of the element found, ie, bike or owner etc.
   }
 /**
  *This will handle the characters or "values" in the xml file, and will print them specified like the System.out argument seen in the code
+ * @param chars character array to be converted into a string
+ * @param start array element start index
+ * @param length string length
 */
   public void characters(char[] chars, int start, int length) { 
     // collect the characters
