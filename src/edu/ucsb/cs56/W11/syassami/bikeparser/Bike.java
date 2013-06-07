@@ -9,9 +9,9 @@ package edu.ucsb.cs56.W11.syassami.bikeparser;
 	public class Bike {
 	  String owner;
 	  String type;
-	  List components;
+	  List<String> components;
 	  
-	  public Bike(String owner, String type, List components) {
+	  public Bike(String owner, String type, List<String> components) {
 	    this.owner = owner;
 	    this.type = type;
 	    this.components = components;
@@ -22,11 +22,11 @@ package edu.ucsb.cs56.W11.syassami.bikeparser;
 	  public String getType() {return type;}
 	  
 	  public String getComponents() {
-	    StringBuffer s = new StringBuffer();
-	    for (Iterator i = components.iterator(); i.hasNext();) {
-	      if (s.length() != 0) s.append(", ");
-	      s.append((String)i.next());
-	    }  
+	    StringBuilder s = new StringBuilder();
+          for (String component : components) {
+              if (s.length() != 0) s.append(", ");
+              s.append(component);
+          }
 	    return s.toString();
 	  }
 	

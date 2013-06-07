@@ -11,8 +11,8 @@ import org.xml.sax.helpers.*;
 
 
 public class MySAXParser extends DefaultHandler {
-  List bikeList; // List of Bike's 
-  List componentList; // List of components
+  LinkedList<Bike> bikeList; // List of Bike's
+  LinkedList<String> componentList; // List of components
   String owner; // Bike Owner 
   String type;
   StringBuffer b = new StringBuffer(); // collects text
@@ -27,7 +27,7 @@ public class MySAXParser extends DefaultHandler {
       try {
         mp.processFile(args[0]);
         mp.listBikes();
-      } catch (Exception e) {e.printStackTrace();};
+      } catch (Exception e) {e.printStackTrace();}
     }
   }  
 
@@ -38,7 +38,7 @@ public class MySAXParser extends DefaultHandler {
   public void processFile(String file) throws Exception {
     // Parse an XML file and 
     // return a list of bikes's
-    bikeList = new LinkedList();
+    bikeList = new LinkedList<Bike>();
     XMLReader parser = XMLReaderFactory.createXMLReader();
     parser.setContentHandler(this);
     parser.parse(file);
@@ -53,7 +53,7 @@ qname is the name of the element found, ie, bike or owner etc.
     System.out.println("startElement:" + qname);
     b.setLength(0); // empty character buffer
     if (qname.equals("bike")) {
-      componentList = new LinkedList();
+      componentList = new LinkedList<String>();
     }  
   } 
   /**
@@ -87,11 +87,10 @@ qname is the name of the element found, ie, bike or owner etc.
  */
   public void listBikes() {
     // List Bike's on System.out
-    for (Iterator i = bikeList.iterator(); i.hasNext();) {
-      Bike bike = (Bike)i.next();
-      System.out.println(bike.getOwner() + "/" + 
-                         bike.getType() + "/" + bike.getComponents()); 
-    }  
+      for (Bike bike : bikeList) {
+          System.out.println(bike.getOwner() + "/" +
+                  bike.getType() + "/" + bike.getComponents());
+      }
   }  
 /**
  * Returns list of bikes
