@@ -1,3 +1,9 @@
+project history
+===============
+```
+ N/A
+```
+
 *Shayan Yassami & Tong Wu*
 # How To Use SAX XML Parsing in Java
 Many people enter the java programming language with some ideas of parsing files coming on from other languages; yet the choice of deciding which method to use can be difficult, and the beginner might not know the pro’s and con’s of each. There are two popular XML parsing methods in java, DOM (Document Object Model), and SAX (Simple API for XML). In this tutorial, we will go ahead and use SAX Parser, a faster and more memory efficient mechanism. So lets get straight to it.
