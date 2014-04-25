@@ -94,33 +94,93 @@ import java.util.*;
 
 ## The End Result
 ````
-startElement:collection
+        startElement:cyclingteam
         characters:
-          
+
         startElement:bike
         characters:
-            
+
         startElement:owner
         characters:Shayan
         endElement:owner:Shayan
         characters:
-            
+
         startElement:type
         characters:Colnago
         endElement:type:Colnago
         characters:
-            
+
         startElement:components
         characters:Shimano
         endElement:components:Shimano
-        characters:	
-            
+        characters:
+
         startElement:components
         characters:FSA
         endElement:components:FSA
         characters:
-            
-          
+
         endElement:bike:
+
+        characters:
+
+        startElement:bike
+        characters:
+
+        startElement:owner
+        characters:Kelsey
+        endElement:owner:Kelsey
+        characters:
+
+        startElement:type
+        characters:Cannondale
+        endElement:type:Cannondale
+        characters:
+
+        startElement:components
+        characters:Shimano
+        endElement:components:Shimano
+        characters:
+
+        startElement:components
+        characters:Deda
+        endElement:components:Deda
+        characters:
+
+        endElement:bike:
+
+        characters:
+
+        startElement:bike
+        characters:
+
+        startElement:owner
+        characters:Danny
+        endElement:owner:Danny
+        characters:
+
+        startElement:type
+        characters:Fuji
+        endElement:type:Fuji
+        characters:
+
+        startElement:components
+        characters:Sram
+        endElement:components:Sram
+        characters:
+
+        startElement:components
+        characters:FSA
+        endElement:components:FSA
+        characters:
+
+        endElement:bike:
+
+        characters:
+
+        endElement:cyclingteam:
+
+        Shayan/Colnago/Shimano, FSA
+        Kelsey/Cannondale/Shimano, Deda
+        Danny/Fuji/Sram, FSA
 ````
-and then will continue to parse the rest of our XML file.
